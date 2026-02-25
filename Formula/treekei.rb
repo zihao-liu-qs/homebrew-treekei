@@ -1,13 +1,23 @@
 class Treekei < Formula
-  desc "CLI tool to show file tree with line counts"
+  desc "command line tool showing file tree with line counts"
   homepage "https://github.com/zihao-liu-qs/treekei"
-  url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.1.0/treekei_darwin_arm64.tar.gz"
-  sha256 "9115027651acebd32adaaa10f7a1126ada4e1305d0e46394e91a2eb46da987ea"
-  version "0.1.0"
-  license "MIT"
+  version "0.2.3"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.2.3/treekei-v0.2.3-darwin-amd64.tar.gz"
+      sha256 "sha256:eb630a47546e86a5d993a2f2c8ee7c70fa276fce2eff37fd1410a23eac369e5f"
+    elsif Hardware::CPU.arm?
+      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.2.3/treekei-v0.2.3-darwin-arm64.tar.gz"
+      sha256 "sha256:03b4585d82a41b662bbad2e154381f1a3bc718dda4968fe17d94f3bd7097fdb3"
+    end
+  end
 
   def install
     bin.install "treekei"
   end
-end
 
+  test do
+    system "#{bin}/treekei", "--version"
+  end
+end
