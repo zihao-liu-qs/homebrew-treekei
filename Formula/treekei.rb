@@ -11,7 +11,7 @@ class Treekei < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.1/treekei_0.3.1_darwin_amd64.tar.gz"
-      sha256 "da8b59ff8366be1cec17c7e1f3038c49daa26a5a081aa6aae6a903cd1ebca26f"
+      sha256 "6fca47bb247b14af293d9005072520d06f8ceaad6c1ac772ae76a2c23aa97f60"
 
       define_method(:install) do
         bin.install "treekei"
@@ -19,7 +19,7 @@ class Treekei < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.1/treekei_0.3.1_darwin_arm64.tar.gz"
-      sha256 "9d0f6d8352ba86319df383fc63daa4a7ad3ddc2c2685b73adb6eb6ada2daec5c"
+      sha256 "8daeb9ab1f8fe4f620728d6b73698ea6eb6753c71424533c2394d60b011d550a"
 
       define_method(:install) do
         bin.install "treekei"
@@ -30,14 +30,14 @@ class Treekei < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.1/treekei_0.3.1_linux_amd64.tar.gz"
-      sha256 "40e7f8c1c1ea0c7701dd5e55d6916446988bdbf18ff09d201370228f1e9babf6"
+      sha256 "480b6101c2b2fd3e56e1a13a2366d5de9ccac33c5f387eb554bd4f5f3195d628"
       define_method(:install) do
         bin.install "treekei"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.1/treekei_0.3.1_linux_arm64.tar.gz"
-      sha256 "ce725e1123d7f3acccca2ce2cd20873043ca131c08495500c9d4a64d0b7ed600"
+      sha256 "3a211b1dfee66c9df2730526f977a9bbaa18ee0df47a061bede97bc87077eab7"
       define_method(:install) do
         bin.install "treekei"
       end
