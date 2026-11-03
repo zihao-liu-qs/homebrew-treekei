@@ -5,21 +5,21 @@
 class Treekei < Formula
   desc "Command-line tool showing a file tree with line counts"
   homepage "https://github.com/zihao-liu-qs/treekei"
-  version "0.3.3"
+  version "0.3.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.3/treekei_0.3.3_darwin_amd64.tar.gz"
-      sha256 "743849d80b901050404b6923c641fa23cf685becdd507e9af47e293e2505c4f8"
+      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.4/treekei_0.3.4_darwin_amd64.tar.gz"
+      sha256 "82f2d90bd8329c8f60bae788ff68948a42ddae5bdd1c685233dc1ec097bff351"
 
       define_method(:install) do
         bin.install "treekei"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.3/treekei_0.3.3_darwin_arm64.tar.gz"
-      sha256 "44d2069044ccc97157d9dd41e39e2274c6c1f55ea5feba425c385ea02bb0bd6a"
+      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.4/treekei_0.3.4_darwin_arm64.tar.gz"
+      sha256 "d63f88a2e9d9e3436f43ab104c9514d19ee4d9b959b932d1fe96a79a62cefeae"
 
       define_method(:install) do
         bin.install "treekei"
@@ -29,15 +29,15 @@ class Treekei < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.3/treekei_0.3.3_linux_amd64.tar.gz"
-      sha256 "83f95bfbf14b03b9a44c04c85d888bb09df3d586cd51d45b4b87c33c7a2d4c79"
+      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.4/treekei_0.3.4_linux_amd64.tar.gz"
+      sha256 "31aa070ebcd094c16882ae21b0552332d456052bc9a5be733e4edd963135d724"
       define_method(:install) do
         bin.install "treekei"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.3/treekei_0.3.3_linux_arm64.tar.gz"
-      sha256 "2386b231b05536f0054885ca971c1218615dc39887866122ab894af563328237"
+      url "https://github.com/zihao-liu-qs/treekei/releases/download/v0.3.4/treekei_0.3.4_linux_arm64.tar.gz"
+      sha256 "0c906db0e48662891bdf012da4e415e6f7768c07b760daf0d06b6341dd662e3f"
       define_method(:install) do
         bin.install "treekei"
       end
